@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+  blog:
+    build: .
+    volumes:
+      - ./content:/app/content
+      - ./output:/app/output
+    command: build --watch
+  serve:
+    image: nginx:alpine
+    ports:
+      - "8080:80"
+    volumes:
+      - ./output:/usr/share/nginx/html:ro
+    depends_on:
+      - blog

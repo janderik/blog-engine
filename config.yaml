@@ -1,0 +1,9 @@
+title: "My Blog"
+description: "A static blog generated with blog-engine"
+author: "Blog Author"
+base_url: "https://example.com"
+posts_per_page: 10
+theme: "default"
+content_dir: "content"
+output_dir: "output"
+template_dir: "src/templates"
